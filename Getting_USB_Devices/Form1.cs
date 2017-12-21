@@ -50,7 +50,7 @@ namespace Getting_USB_Devices
             _devices = Searcher.GetDevices();
             foreach(var device in _devices)
             {
-                _table.Rows.Add($"{device.Name} {device.VolumeName}", device.TotalFreeSpace, device.OccupiedSpace, device.TotalSize);
+                _table.Rows.Add($"{device.Name} {device.VolumeName}", device.TotalSize, device.TotalFreeSpace, device.OccupiedSpace);
             }
             if (OutputGrid.RowCount - 1 > currentPosition)
             {
